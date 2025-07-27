@@ -5,16 +5,6 @@
     Description: movies database initialization script.
 */
 
--- drop database user if exists 
-DROP USER IF EXISTS 'movies_user'@'localhost';
-
--- create movies_user and grant them all privileges to the movies database 
--- CREATE USER 'movies_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'popcorn';
-CREATE USER 'movies_user'@'localhost' IDENTIFIED BY 'popcorn';
-
--- grant all privileges to the movies database to user movies_user on localhost 
-GRANT ALL PRIVILEGES ON movies.* TO 'movies_user'@'localhost';
-
 -- drop tables if they are present
 DROP TABLE IF EXISTS film;
 DROP TABLE IF EXISTS studio;
@@ -67,6 +57,9 @@ INSERT INTO studio(studio_name)
 	
 INSERT INTO studio(studio_name)
     VALUES('Universal Pictures');
+
+INSERT INTO studio(studio_name)
+    VALUES('Warner Bros');
 	
 -- insert genre records
 INSERT INTO genre(genre_name)
