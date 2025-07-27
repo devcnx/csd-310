@@ -30,24 +30,24 @@ try:
     cursor = db.cursor()
 
     # Query 1: Select all from the studio table
-    print("-- STUDIO TABLE --")
+    print("\n-- STUDIO TABLE --")
     cursor.execute("SELECT studio_id, studio_name FROM studio")
     for row in cursor.fetchall():
-        print(row)
+        print(f"Studio ID: {row[0]}\nStudio Name: {row[1]}\n")
     print("\n")  # Add space for readability
 
     # Query 2: Select all from the genre table
     print("-- GENRE TABLE --")
     cursor.execute("SELECT genre_id, genre_name FROM genre")
     for row in cursor.fetchall():
-        print(row)
+        print(f"Genre ID: {row[0]}\nGenre Name: {row[1]}\n")
     print("\n")
 
     # Query 3: Select movies with runtime < 120 minutes
     print("-- FILMS WITH RUNTIME LESS THAN 2 HOURS --")
     cursor.execute("SELECT film_name FROM film WHERE film_runtime < 120")
     for row in cursor.fetchall():
-        print(row)
+        print(f"Film Name: {row[0]}\n")
     print("\n")
 
     # Query 4: Group films by director
