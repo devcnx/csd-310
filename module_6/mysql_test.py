@@ -6,14 +6,14 @@ Assignment: Module 6.2 Movies: Setup
 Purpose: Connect to MySQL database and test connection.
 
 Imports:
+    - os: Used to interact with the operating system.
     - mysql.connector: Used to connect to MySQL database.
     - errorcode: Used to handle MySQL errors.
-    - dotenv: Used to interact with the `.env` file.
-    - dotenv_values: Used to load environment variables from the `.env` file.
+    - load_dotenv: Used to interact with the `.env` file.
 """
 
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
 load_dotenv()
 
