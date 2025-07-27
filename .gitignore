@@ -1,2 +1,37 @@
 # Course Specific Template
 TEMPLATE.md
+
+# JetBrains IDE
+.idea
+
+# User-Specific Stuff
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/shelf
+
+# Sensitive or Temporary High-Churn Files
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Virtual Environments
+venv
+.venv
+.env
+env
+
+# PyCache
+__pycache__
+.pytest_cache
+
+# Visual Studio Code
+.vscode
+
+# macOS
+.DS_Store
+
