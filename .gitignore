@@ -35,3 +35,5 @@ __pycache__
 # macOS
 .DS_Store
 
+# Assignment Requirements PDF
+CSD310 MODULES.pdf
