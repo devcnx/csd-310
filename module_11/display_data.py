@@ -15,7 +15,6 @@ from constants import (
 from mysql.connector import errorcode
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
 
@@ -32,7 +31,6 @@ def show_table_data(cursor, table_name):
     """
     print(f"\n--- {table_name.upper()} ---")
     try:
-        # Define a list of columns that should be formatted as currency.
         currency_columns = {
             "assets": ["asset_value"],
             "transactions": ["amount"],
@@ -163,15 +161,13 @@ def prompt_for_date(available_dates):
         year = available_years[0]
         print(f"\n({year}) Selected Automatically.")
     else:
-        # Prompt for year
         while True:
             print("\nAvailable Years:", available_years)
             try:
                 year = int(input("Select a Year: "))
                 if year in available_dates:
                     break
-                else:
-                    print("Invalid Year. Please Select from the Available Options.")
+                print("Invalid Year. Please Select from the Available Options.")
             except ValueError:
                 print("Invalid Input. Please Enter a Number.")
 
@@ -181,8 +177,7 @@ def prompt_for_date(available_dates):
             month = int(input("Select a Month: "))
             if month in available_dates[year]:
                 break
-            else:
-                print("***Invalid Month. Please Select from the Available Options.\n")
+            print("***Invalid Month. Please Select from the Available Options.\n")
         except ValueError:
             print("***Invalid Input. Please Enter a Number.\n")
 
