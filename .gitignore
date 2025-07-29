@@ -41,3 +41,6 @@ CSD310 MODULES.pdf
 # Database Scripts
 **/db_init_2022.sql
 **/willson_financial_init.sql
+
+# Custom AutoDocString
+python.mustache
